@@ -1,19 +1,21 @@
 export default {
   colors: {
-    main: "#37474f",
-    dark: "#263238",
-    light: "#546e7a",
-    lighter: "#b0bec5",
-    text: "#fafafa",
-    link: "#444444",
+    primary: "#3DB46D",
+    secondary: "#EB5757",
+    dark: "#000000",
+    light: "#FFFFFF",
   },
   fontSizes: {
-    large: "3rem",
-    medium: "2rem",
-    small: "1.2rem",
+    xLarge: "24px",
+    large: "18px",
+    medium: "14px",
+    small: "12px",
   },
   spacers: {
-    large: "2rem",
+    large: "45px",
+  },
+  radius: {
+    primary: "24px",
   },
   mediaQueries: {
     bellow786: `only screen and (max-width: 768px)`,

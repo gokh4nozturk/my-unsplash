@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Navigation from "./components/Navigation";
 import Button from "./components/Button";
 
 const MainWrapper = styled.section`
@@ -11,6 +12,7 @@ const MainWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
 `;
 
 const PaginationWrapper = styled.div`
@@ -24,31 +26,8 @@ const PaginationWrapper = styled.div`
   }};
 `;
 
-const Link = styled.a.attrs((props) => ({ target: "_blank" }))`
-  color: violet;
-  font-size: 1.5rem;
-`;
-
 function App() {
-  return (
-    <MainWrapper>
-      <p>dfjgdlfkg</p>
-      <Button primary>Click Me!</Button>
-      <Button margin="3rem">Click Me!</Button>
-      <PaginationWrapper page="middle">
-        <Button>Page 1</Button>
-        <Button>Page 2</Button>
-        <Button>Page 3</Button>
-        <Button>Page 4</Button>
-        <Button>Page 1</Button>
-        <Button>Page 2</Button>
-        <Button>Page 3</Button>
-        <Button>Page 4</Button>
-      </PaginationWrapper>
-      <Link href="https://www.google.com">One Link</Link>
-      <Link href="https://www.google.com">Another Link</Link>
-    </MainWrapper>
-  );
+  return <MainWrapper></MainWrapper>;
 }
 
 export default App;
