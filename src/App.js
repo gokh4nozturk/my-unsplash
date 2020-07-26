@@ -27,7 +27,27 @@ const PaginationWrapper = styled.div`
 `;
 
 function App() {
-  return <MainWrapper></MainWrapper>;
+  return (
+    <MainWrapper>
+      <Button buttonStyle="primary" buttonSize="large">
+        Add a photo
+      </Button>
+      <Button buttonStyle="primary" buttonSize="small">
+        Add a photo
+      </Button>
+      <Button buttonStyle="primary">Add a photo</Button>
+      <Button buttonStyle="secondary" buttonSize="large">
+        Add a photo
+      </Button>
+      <Button buttonStyle="secondary" buttonSize="small">
+        Add a photo
+      </Button>
+      <Button buttonStyle="secondary">Add a photo</Button>
+      <Button buttonSize="large">Delete</Button>
+      <Button buttonSize="small">Delete</Button>
+      <Button>Cancel</Button>
+    </MainWrapper>
+  );
 }
 
 export default App;
