@@ -3,15 +3,15 @@ import styled, { css } from "styled-components";
 
 import { FadeIn } from "./styled";
 
-/* animation: 2s ${FadeIn} ease-in; */
 const StyledButton = styled.button`
-  font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  animation: 1s ${FadeIn} ease-in;
 
+  font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: ${(props) => props.theme.fontSizes.medium};
   border-radius: ${({ theme }) => theme.radius.primary};
 

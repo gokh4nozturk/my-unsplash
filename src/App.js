@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Navigation from "./components/Navigation";
-import Button from "./components/Button";
+import Navigation from "./components/layout/Navigation";
+import Main from "./components/layout/Main";
 
 const MainWrapper = styled.section`
   width: 100%;
@@ -29,23 +29,8 @@ const PaginationWrapper = styled.div`
 function App() {
   return (
     <MainWrapper>
-      <Button buttonStyle="primary" buttonSize="large">
-        Add a photo
-      </Button>
-      <Button buttonStyle="primary" buttonSize="small">
-        Add a photo
-      </Button>
-      <Button buttonStyle="primary">Add a photo</Button>
-      <Button buttonStyle="secondary" buttonSize="large">
-        Add a photo
-      </Button>
-      <Button buttonStyle="secondary" buttonSize="small">
-        Add a photo
-      </Button>
-      <Button buttonStyle="secondary">Add a photo</Button>
-      <Button buttonSize="large">Delete</Button>
-      <Button buttonSize="small">Delete</Button>
-      <Button>Cancel</Button>
+      <Navigation />
+      <Main />
     </MainWrapper>
   );
 }
