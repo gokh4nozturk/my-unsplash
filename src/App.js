@@ -3,8 +3,6 @@ import styled from "styled-components";
 
 import Navigation from "./components/layout/Navigation";
 import Main from "./components/layout/Main";
-import AddNewPhoto from "./components/layout/AddNewPhoto";
-import DeleteScreen from "./components/layout/DeleteScreen";
 
 const MainWrapper = styled.section`
   width: 100%;
