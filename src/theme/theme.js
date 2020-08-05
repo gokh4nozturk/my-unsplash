@@ -20,12 +20,12 @@ export default {
     style: {
       color: {
         primary: "#3DB46D",
-        secondary: "transparent",
+        secondary: "#EB5757",
         ghost: "transparent",
       },
       text: {
         primary: "white",
-        secondary: "#EB5757",
+        secondary: "white",
         ghost: "gray",
       },
       border: {
@@ -54,6 +54,7 @@ export default {
   },
   radius: {
     primary: "24px",
+    secondary: "12px",
   },
   mediaQueries: {
     bellow786: `only screen and (max-width: 768px)`,
