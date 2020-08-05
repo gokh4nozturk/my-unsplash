@@ -33,8 +33,6 @@ function App() {
     <MainWrapper>
       <Navigation />
       <Main />
-      <AddNewPhoto />
-      <DeleteScreen />
     </MainWrapper>
   );
 }
