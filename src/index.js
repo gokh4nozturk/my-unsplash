@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
-import "./index.css";
 import App from "./App";
+import fetch from "node-fetch";
 
+import "./index.css";
 import GlobalStyles from "./theme/globalStyles";
 import Theme from "./theme/theme";
 
 import * as serviceWorker from "./serviceWorker";
+
+global.fetch = fetch;
 
 ReactDOM.render(
   <ThemeProvider theme={Theme}>
