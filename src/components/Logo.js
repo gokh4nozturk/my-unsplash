@@ -10,6 +10,7 @@ const StyledLogo = styled.div`
   font-style: normal;
   font-weight: 800;
   width: 180px;
+  cursor: pointer;
 
   font-family: ${({ theme }) => theme.fontFamily.primary};
   p:first-child {

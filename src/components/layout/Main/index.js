@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import Button from "../../Button";
+
 import { StyledMain, StyledCard } from "./styled";
 import Unsplash from "unsplash-js";
 
@@ -18,6 +20,7 @@ function Main() {
       .then((e) => e.json())
       .then((data) => {
         setImages([...images, ...data]);
+        console.log(data);
       });
   };
   useEffect(() => {
@@ -28,10 +31,17 @@ function Main() {
     <StyledMain>
       <StyledCard>
         {images.map((image) => (
-          <img key={`${image.id}`} src={`${image.urls.regular}`} height={300} />
+          <img key={`${image.id}`} src={`${image.urls.regular}`} />
         ))}
       </StyledCard>
-      <button onClick={() => getPhotos(page + 1)}>load more</button>
+      <Button
+        className="load-more-button"
+        buttonSize="default"
+        buttonStyle="primary"
+        onClick={() => getPhotos(page + 1)}
+      >
+        load more
+      </Button>
     </StyledMain>
   );
 }

@@ -9,6 +9,7 @@ const Button = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   animation: 1s ${FadeIn} ease-in;
 
   font-family: ${({ theme }) => theme.fontFamily.primary};
