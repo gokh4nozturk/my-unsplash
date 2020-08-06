@@ -20,7 +20,7 @@ export const StyledCard = styled.div`
   align-items: center;
 
   img {
-    margin: 5px;
+    margin: 15px;
     border-radius: ${({ theme }) => theme.radius.secondary};
   }
 `;
