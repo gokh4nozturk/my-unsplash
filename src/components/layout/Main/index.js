@@ -28,7 +28,7 @@ function Main() {
     <StyledMain>
       <StyledCard>
         {images.map((image) => (
-          <img src={`${image.urls.regular}`} height={300} />
+          <img key={`${image.id}`} src={`${image.urls.regular}`} height={300} />
         ))}
       </StyledCard>
       <button onClick={() => getPhotos(page + 1)}>load more</button>

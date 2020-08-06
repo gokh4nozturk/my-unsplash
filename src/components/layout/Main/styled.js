@@ -16,11 +16,11 @@ export const StyledMain = styled.main`
 export const StyledCard = styled.div`
   display: flex;
   flex-flow: wrap;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
 
   img {
-    margin: 15px;
+    margin: 10px;
     border-radius: ${({ theme }) => theme.radius.secondary};
   }
 `;
