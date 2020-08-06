@@ -1,9 +1,7 @@
 import React from "react";
 
-import Button from "../Button";
-import { StyledPopUp, StyledTextBox } from "../styled/index";
-
-import styled from "styled-components";
+import Button from "../../Button";
+import { StyledPopUp, StyledTextBox } from "./styled";
 
 function DeleteScreen() {
   return (

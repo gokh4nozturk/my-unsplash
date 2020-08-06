@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 import Button from "../../Button";
-import { StyledPopUp, StyledTextBox } from "../../styled";
+import { StyledPopUp, StyledTextBox } from "./styled";
 
 function AddNewPhoto() {
   return (
