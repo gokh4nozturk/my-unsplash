@@ -21,16 +21,19 @@ export default {
       color: {
         primary: "#3DB46D",
         secondary: "#EB5757",
+        thirty: "transparent",
         ghost: "transparent",
       },
       text: {
         primary: "white",
         secondary: "white",
+        thirty: "red",
         ghost: "gray",
       },
       border: {
         primary: "none",
-        secondary: "1px solid #EB5757",
+        secondary: "none",
+        thirty: "1px solid #EB5757",
         ghost: "none",
       },
       size: {

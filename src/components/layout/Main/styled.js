@@ -9,6 +9,7 @@ export const StyledMain = styled.main`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  flex-flow: wrap;
 
   margin-top: ${({ theme }) => theme.spacers.large};
   background-color: ${({ theme }) => theme.colors.light};
@@ -20,14 +21,6 @@ export const StyledMain = styled.main`
     margin: 10px;
     width: 300px;
   }
-`;
-
-export const StyledCard = styled.div`
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  /* align-items: center; */
-
   img {
     margin: 10px;
     border-radius: ${({ theme }) => theme.radius.secondary};
@@ -38,4 +31,8 @@ export const StyledCard = styled.div`
   img:hover {
     cursor: pointer;
   }
+`;
+
+export const StyledCard = styled.img`
+  display: grid;
 `;

@@ -29,11 +29,9 @@ function Main() {
 
   return (
     <StyledMain>
-      <StyledCard>
-        {images.map((image) => (
-          <img key={`${image.id}`} src={`${image.urls.regular}`} />
-        ))}
-      </StyledCard>
+      {images.map((image) => (
+        <StyledCard key={`${image.id}`} src={`${image.urls.regular}`} />
+      ))}
       <Button
         className="load-more-button"
         buttonSize="default"
