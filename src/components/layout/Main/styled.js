@@ -21,6 +21,7 @@ export const StyledMain = styled.main`
     margin: 10px;
     width: 300px;
   }
+
   img {
     margin: 10px;
     border-radius: ${({ theme }) => theme.radius.secondary};
@@ -33,6 +34,23 @@ export const StyledMain = styled.main`
   }
 `;
 
-export const StyledCard = styled.img`
-  display: grid;
+export const StyledCard = styled.img``;
+
+export const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  .buttons {
+    flex: 1;
+
+    padding: 0;
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    border-radius: ${({ theme }) => theme.radius.secondary};
+  }
+  p {
+    flex: 2;
+    font-weight: 600;
+
+    font-size: ${({ theme }) => theme.fontSizes.large};
+    color: ${({ theme }) => theme.colors.dark};
+  }
 `;

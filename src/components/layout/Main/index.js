@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import Button from "../../Button";
 
-import { StyledMain, StyledCard } from "./styled";
+import { StyledMain, StyledCard, StyledContainer } from "./styled";
 import Unsplash from "unsplash-js";
 
 const splash = new Unsplash({
   accessKey: "J4enJ_Ah3mO3N34aQt22i7Hg6_EWyfhmWvPPqkHk6ew",
+  timeout: 1500,
 });
 
 function Main() {
@@ -40,6 +41,23 @@ function Main() {
       >
         load more
       </Button>
+      <StyledContainer>
+        <div className="buttons">
+          <Button buttonStyle="thirty" buttonSize="small">
+            Delete
+          </Button>
+          <Button buttonStyle="primary" buttonSize="small">
+            Copy
+          </Button>
+        </div>
+
+        <p>gfkljfglkhkhgjlkjhlkf</p>
+
+        {
+          //images.map((image) => (
+          //   <p>{`${image.alt_description}`}</p> ))
+        }
+      </StyledContainer>
     </StyledMain>
   );
 }
