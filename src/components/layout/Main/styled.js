@@ -2,6 +2,42 @@ import React from "react";
 
 import styled from "styled-components";
 
+export const StyledContainer = styled.div`
+  opacity: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 200px 0px;
+  border: 2px solid red;
+
+  .buttons {
+    border: 2px dotted green;
+    grid: 1/2;
+    display: grid;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    Button {
+      padding: 0;
+      width: 100%;
+
+      font-size: ${({ theme }) => theme.fontSizes.small};
+      border-radius: ${({ theme }) => theme.radius.secondary};
+    }
+  }
+  p {
+    border: 2px solid blue;
+    margin: 0;
+    padding: 0;
+    grid: 3/4;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 600;
+
+    font-size: ${({ theme }) => theme.fontSizes.large};
+    color: ${({ theme }) => theme.colors.dark};
+  }
+`;
+
 export const StyledMain = styled.main`
   width: 100%;
   height: 100%;
@@ -22,35 +58,19 @@ export const StyledMain = styled.main`
     width: 300px;
   }
 
-  img {
-    margin: 10px;
-    border-radius: ${({ theme }) => theme.radius.secondary};
-    width: 20%;
-    height: 20%;
-  }
-
-  img:hover {
-    cursor: pointer;
+  &:hover ${StyledContainer} {
+    opacity: 1;
   }
 `;
 
-export const StyledCard = styled.img``;
+export const StyledCard = styled.img`
+  border: 2px solid red;
+  margin: 10px;
+  border-radius: ${({ theme }) => theme.radius.secondary};
+  width: 20%;
+  height: 20%;
 
-export const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  .buttons {
-    flex: 1;
-
-    padding: 0;
-    font-size: ${({ theme }) => theme.fontSizes.small};
-    border-radius: ${({ theme }) => theme.radius.secondary};
-  }
-  p {
-    flex: 2;
-    font-weight: 600;
-
-    font-size: ${({ theme }) => theme.fontSizes.large};
-    color: ${({ theme }) => theme.colors.dark};
+  &:hover {
+    cursor: pointer;
   }
 `;
