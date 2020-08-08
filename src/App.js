@@ -2,6 +2,7 @@ import React from "react";
 
 import Navigation from "./components/layout/Navigation";
 import Main from "./components/layout/Main/";
+import User from "./components/pages/User";
 
 import styled from "styled-components";
 
@@ -31,7 +32,7 @@ function App() {
   return (
     <MainWrapper>
       <Navigation />
-      <Main />
+      <User />
     </MainWrapper>
   );
 }
