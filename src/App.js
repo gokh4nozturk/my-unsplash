@@ -33,6 +33,7 @@ function App() {
     <MainWrapper>
       <Navigation />
       <User />
+      <Main/>
     </MainWrapper>
   );
 }
