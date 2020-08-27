@@ -62,7 +62,6 @@ export const StyledMain = styled.main`
 `;
 
 export const StyledCard = styled.img`
-  border: 2px solid red;
   margin: 10px;
   border-radius: ${({ theme }) => theme.radius.secondary};
   width: 20%;
