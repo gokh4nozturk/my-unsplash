@@ -32,7 +32,6 @@ function App() {
   return (
     <MainWrapper>
       <Navigation />
-      <User />
       <Main/>
     </MainWrapper>
   );

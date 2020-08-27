@@ -13,7 +13,7 @@ export default {
     small: "12px",
   },
   fontFamily: {
-    primary: "Noto Sans",
+    primary: "Noto Sans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     secondary: "",
   },
   button: {

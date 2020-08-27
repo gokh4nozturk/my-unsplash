@@ -8,7 +8,7 @@ import Logo from "../Logo";
 const StyledNavigation = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
   width: 100%;
   align-content: center;
 `;
@@ -23,6 +23,9 @@ function Navigation() {
       <div style={{ grid: 2 / 3, display: "flex", justifyContent: "flex-end" }}>
         <Button buttonStyle="primary" buttonSize="default">
           Add a photo
+        </Button>
+        <Button buttonStyle="ghost" buttonSize="default">
+          Giriş Yap
         </Button>
       </div>
     </StyledNavigation>

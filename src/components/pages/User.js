@@ -11,10 +11,14 @@ const UserWrapper = styled.section`
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
+  
+  border: 2px solid red;
+
+  font-family: ${({ theme }) => theme.fontFamily.primary};
 `;
 
 function User() {
-  return <UserWrapper></UserWrapper>;
+  return <UserWrapper>selam ben user</UserWrapper>;
 }
 
 export default User;
