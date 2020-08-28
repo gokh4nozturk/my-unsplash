@@ -14,13 +14,8 @@ const StyledNavigation = styled.nav`
 `;
 
 function Navigation() {
-  var style = {
-    display:"flex",
-    height:"100%",
-    width:"100%"
-  };
   return (
-    <div style={style}>
+    
       <StyledNavigation>
       <div style={{ grid: 1 / 2, display: "flex" }}>
         <Logo />
@@ -35,7 +30,6 @@ function Navigation() {
         </Button>
       </div>
     </StyledNavigation>
-    </div>
   );
 }
 export default Navigation;
