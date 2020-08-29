@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 import styled from "styled-components";
 import Button from "../Button";
@@ -14,6 +14,11 @@ const StyledNavigation = styled.nav`
 `;
 
 function Navigation() {
+  const [toggle, setToggle] = useState(false);
+  const getLogin = ()=>{
+    setToggle(!toggle);
+    console.log("okay");
+  }
   return (
     
       <StyledNavigation>
@@ -25,7 +30,7 @@ function Navigation() {
         <Button buttonStyle="primary" buttonSize="default">
           Add a photo
         </Button>
-        <Button buttonStyle="ghost" buttonSize="default">
+        <Button buttonStyle="ghost" buttonSize="default" onClick={getLogin}>
           Giriş Yap
         </Button>
       </div>

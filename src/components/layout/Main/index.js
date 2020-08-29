@@ -24,6 +24,7 @@ function Main() {
         console.log(data);
       });
   };
+
   useEffect(() => {
     getPhotos(1);
   }, []);
