@@ -13,14 +13,10 @@ const StyledNavigation = styled.nav`
   align-content: center;
 `;
 
-function Navigation() {
-  const [toggle, setToggle] = useState(false);
-  const getLogin = ()=>{
-    setToggle(!toggle);
-    console.log("okay");
-  }
+function Navigation({getLogin, loggedIn}) {
+  
+  
   return (
-    
       <StyledNavigation>
       <div style={{ grid: 1 / 2, display: "flex" }}>
         <Logo />
@@ -30,9 +26,9 @@ function Navigation() {
         <Button buttonStyle="primary" buttonSize="default">
           Add a photo
         </Button>
-        <Button buttonStyle="ghost" buttonSize="default" onClick={getLogin}>
+        {loggedIn ? <p>avatar</p>: <Button buttonStyle="ghost" buttonSize="default" onClick={()=> getLogin()}>
           Giriş Yap
-        </Button>
+        </Button>}
       </div>
     </StyledNavigation>
   );

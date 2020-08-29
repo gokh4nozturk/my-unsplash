@@ -5,6 +5,9 @@ export const StyledPopUp = styled.div`
   flex-direction: column;
   padding: 24px 32px;
   font-weight: 500;
+  position:absolute;
+  top:400px;
+  left:650px;
 
   color: ${({ theme }) => theme.colors.dark};
   background-color: ${({ theme }) => theme.colors.light};

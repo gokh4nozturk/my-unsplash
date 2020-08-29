@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 import Navigation from "./components/layout/Navigation";
 import Main from "./components/layout/Main/";
@@ -29,10 +29,24 @@ const PaginationWrapper = styled.div`
 `;
 
 function App() {
+  const [popUp, setPopUp] = useState(false);
+  const [loginPopUp, setLoginPopUp] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
+  
+  const popUps =()=>{
+    setPopUp(loginPopUp);
+  }
+  
+  const getLogin = ()=>{
+    setLoginPopUp(!loginPopUp);
+    console.log(loginPopUp);
+    popUps();
+  }
   return (
     <MainWrapper>
-      <Navigation />
-      <Login/>
+      <Navigation getLogin={getLogin} loggedIn={loggedIn}/>
+      {loginPopUp ? <Login/> : null}
+      <Main popUp={popUp}/>
     </MainWrapper>
   );
 }

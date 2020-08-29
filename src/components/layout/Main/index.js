@@ -10,7 +10,7 @@ const splash = new Unsplash({
   timeout: 1500,
 });
 
-function Main() {
+function Main({popUp}) {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -30,7 +30,7 @@ function Main() {
   }, []);
 
   return (
-    <StyledMain>
+    <StyledMain popUp={popUp}>
       {images.map((image) => (
         <StyledCard key={`${image.id}`} src={`${image.urls.regular}`} />
       ))}
