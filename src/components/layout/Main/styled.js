@@ -2,33 +2,38 @@ import styled from "styled-components";
 
 export const StyledPopUp = styled.div`
   opacity: 0;
+  position: absolute;
+  margin: 5px;
+  width: 17%;
+  height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  width: 210px;
 
   .buttons {
     display: grid;
+    flex: 1;
     justify-content: flex-end;
     flex-direction: column;
+    padding: 5px;
 
     Button {
-      padding: 0;
+      padding: 1px;
+      margin: 2px;
       width: 100%;
 
       font-size: ${({ theme }) => theme.fontSizes.small};
       border-radius: ${({ theme }) => theme.radius.secondary};
     }
   }
-  p {
+  .description {
+    flex: 2;
     margin: 0;
     padding: 5px;
     display: flex;
     align-items: flex-end;
-    font-weight: 600;
 
-    font-size: ${({ theme }) => theme.fontSizes.large};
+    font-family: ${({ theme }) => theme.fontFamily.primary};
     color: ${({ theme }) => theme.colors.light};
   }
 `;
@@ -51,17 +56,12 @@ export const StyledMain = styled.main`
     margin: 10px;
     width: 300px;
   }
-
-  &:hover ${StyledPopUp} {
-    opacity: 1;
-  }
 `;
 
 export const StyledCard = styled.img`
-  /* margin: 10px; */
   border-radius: ${({ theme }) => theme.radius.secondary};
-  width: 20%;
-  height: 20%;
+  width: 100%;
+  height: 100%;
 
   &:hover {
     cursor: pointer;
@@ -69,5 +69,14 @@ export const StyledCard = styled.img`
 `;
 
 export const StyledContainer = styled.div`
-  display: inline;
+  width: 24%;
+  height: 24%;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &:hover ${StyledPopUp} {
+    opacity: 1;
+  }
 `;

@@ -14,7 +14,6 @@ export default {
   },
   fontFamily: {
     primary: "Noto Sans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    secondary: "",
   },
   button: {
     style: {

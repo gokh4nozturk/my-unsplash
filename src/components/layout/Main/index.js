@@ -34,7 +34,7 @@ function Main({ popUp }) {
       {images.map((image) => (
         <StyledContainer key={`${image.id}`}>
           <StyledCard src={`${image.urls.regular}`} />
-          <StyledPopUp style={{ height: `140px` }}>
+          <StyledPopUp>
             <div className="buttons">
               <Button buttonStyle="thirty" buttonSize="small">
                 Delete
@@ -43,8 +43,9 @@ function Main({ popUp }) {
                 Copy
               </Button>
             </div>
-
-            <p>{image.alt_description}</p>
+            <div className="description">
+              <p>{image.alt_description}</p>
+            </div>
           </StyledPopUp>
         </StyledContainer>
       ))}
