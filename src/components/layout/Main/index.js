@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Button from "../../Button";
 
-import { StyledMain, StyledCard, StyledContainer } from "./styled";
+import { StyledMain, StyledCard, StyledContainer, StyledPopUp } from "./styled";
 import Unsplash from "unsplash-js";
 
 const splash = new Unsplash({
@@ -10,7 +10,7 @@ const splash = new Unsplash({
   timeout: 1500,
 });
 
-function Main({popUp}) {
+function Main({ popUp }) {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -32,7 +32,21 @@ function Main({popUp}) {
   return (
     <StyledMain popUp={popUp}>
       {images.map((image) => (
-        <StyledCard key={`${image.id}`} src={`${image.urls.regular}`} />
+        <StyledContainer key={`${image.id}`}>
+          <StyledCard src={`${image.urls.regular}`} />
+          <StyledPopUp style={{ height: `140px` }}>
+            <div className="buttons">
+              <Button buttonStyle="thirty" buttonSize="small">
+                Delete
+              </Button>
+              <Button buttonStyle="primary" buttonSize="small">
+                Copy
+              </Button>
+            </div>
+
+            <p>{image.alt_description}</p>
+          </StyledPopUp>
+        </StyledContainer>
       ))}
       <Button
         className="load-more-button"
@@ -42,23 +56,6 @@ function Main({popUp}) {
       >
         load more
       </Button>
-      <StyledContainer>
-        <div className="buttons">
-          <Button buttonStyle="thirty" buttonSize="small">
-            Delete
-          </Button>
-          <Button buttonStyle="primary" buttonSize="small">
-            Copy
-          </Button>
-        </div>
-
-        <p>gfkljfglkhkhgjlkjhlkf</p>
-
-        {
-          //images.map((image) => (
-          //   <p>{`${image.alt_description}`}</p> ))
-        }
-      </StyledContainer>
     </StyledMain>
   );
 }

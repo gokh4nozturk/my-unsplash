@@ -1,22 +1,26 @@
-import React, {useState} from "react";
+import React from "react";
 
-import Button from '../../Button';
-import {StyledPopUp,StyledTextBox} from './styled';
+import Button from "../../Button";
+import { StyledPopUp, StyledTextBox } from "./styled";
 
 function Login() {
-  return <StyledPopUp style={{border:"2px solid red"}}>
-    <h3>Giriş Yap</h3>
-    <br/>
-    <label>Kullanıcı Adı</label>
-    <StyledTextBox type="text" placeholder="Severus Snipe"></StyledTextBox>
-    <br/>
-    <label>Parola</label>
-    <StyledTextBox type="password" placeholder="************"></StyledTextBox>
-    <br/>
-    <div className="buttons">
-      <Button buttonSize="large" buttonStyle="primary">Giriş Yap - Kayıt ol</Button>
-    </div>
-  </StyledPopUp>;
+  return (
+    <StyledPopUp style={{ border: "2px solid red" }}>
+      <h3>Giriş Yap</h3>
+      <br />
+      <label>Kullanıcı Adı</label>
+      <StyledTextBox type="text" placeholder="Severus Snipe"></StyledTextBox>
+      <br />
+      <label>Parola</label>
+      <StyledTextBox type="password" placeholder="************"></StyledTextBox>
+      <br />
+      <div className="buttons">
+        <Button buttonSize="large" buttonStyle="primary">
+          Giriş Yap - Kayıt ol
+        </Button>
+      </div>
+    </StyledPopUp>
+  );
 }
 
 export default Login;
