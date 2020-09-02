@@ -5,7 +5,7 @@ import { StyledPopUp, StyledTextBox } from "./styled";
 
 function Login() {
   return (
-    <StyledPopUp style={{ border: "2px solid red" }}>
+    <StyledPopUp>
       <h3>Giriş Yap</h3>
       <br />
       <label>Kullanıcı Adı</label>
