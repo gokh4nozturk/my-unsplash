@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 import Navigation from "./components/layout/Navigation";
 import Main from "./components/layout/Main/";
@@ -17,36 +17,35 @@ const MainWrapper = styled.section`
   margin-top: 0.5rem;
 `;
 
-const PaginationWrapper = styled.div`
-  display: flex;
+const Transparent = styled.div`
   width: 100%;
-  align-items: center;
-  justify-content: ${({ page }) => {
-    if (page === "first") return "flex-end";
-    else if (page === "middle") return "space-between";
-    else return "flex-start";
-  }};
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  filter: blur(2px);
+  z-index: 0;
 `;
 
 function App() {
   const [popUp, setPopUp] = useState(false);
   const [loginPopUp, setLoginPopUp] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  
-  const popUps =()=>{
+
+  const popUps = () => {
     setPopUp(loginPopUp);
-  }
-  
-  const getLogin = ()=>{
+  };
+
+  const getLogin = () => {
     setLoginPopUp(!loginPopUp);
     console.log(loginPopUp);
     popUps();
-  }
+  };
   return (
     <MainWrapper>
-      <Navigation getLogin={getLogin} loggedIn={loggedIn}/>
-      {loginPopUp ? <Login/> : null}
-      <Main popUp={popUp}/>
+      <Navigation getLogin={getLogin} loggedIn={loggedIn} />
+      {loginPopUp ? <Transparent /> : null}
+      {loginPopUp ? <Login /> : null}
+      <Main popUp={popUp} />
     </MainWrapper>
   );
 }

@@ -5,9 +5,10 @@ export const StyledPopUp = styled.div`
   flex-direction: column;
   padding: 24px 32px;
   font-weight: 500;
-  position:absolute;
-  top:400px;
-  left:650px;
+  position: fixed;
+  top: 350px;
+  left: 650px;
+  z-index: 1;
 
   color: ${({ theme }) => theme.colors.dark};
   background-color: ${({ theme }) => theme.colors.light};
