@@ -47,7 +47,13 @@ function App() {
   return (
     <MainWrapper>
       <Navigation getLogin={getLogin} loggedIn={loggedIn} />
-      {loginPopUp ? <Transparent /> : null}
+      {loginPopUp ? (
+        <Transparent
+          onClick={() => {
+            setLoginPopUp(!loginPopUp);
+          }}
+        />
+      ) : null}
       {loginPopUp ? <Login /> : null}
       <Main popUp={popUp} />
     </MainWrapper>
