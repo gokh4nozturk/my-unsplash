@@ -45,6 +45,7 @@ export const StyledMain = styled.main`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 1;
 
   margin-top: ${({ theme }) => theme.spacers.large};
   background-color: ${({ theme }) => theme.colors.light};

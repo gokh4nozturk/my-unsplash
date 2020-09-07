@@ -23,7 +23,11 @@ const Transparent = styled.div`
   position: fixed;
   background: rgba(0, 0, 0, 0.75);
   filter: blur(2px);
-  z-index: 0;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 `;
 
 function App() {

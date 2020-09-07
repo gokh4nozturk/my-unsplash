@@ -8,7 +8,7 @@ export const StyledPopUp = styled.div`
   position: fixed;
   top: 350px;
   left: 650px;
-  z-index: 1;
+  z-index: 11;
 
   color: ${({ theme }) => theme.colors.dark};
   background-color: ${({ theme }) => theme.colors.light};
