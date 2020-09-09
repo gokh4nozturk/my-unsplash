@@ -13,7 +13,7 @@ const StyledNavigation = styled.nav`
   align-content: center;
 `;
 
-function Navigation({ getLogin, loggedIn }) {
+function Navigation({ getLogin, loggedIn, getAddPhotos }) {
   return (
     <StyledNavigation>
       <div style={{ grid: 1 / 2, display: "flex" }}>
@@ -21,7 +21,11 @@ function Navigation({ getLogin, loggedIn }) {
         <SearchBox type="Search by name"></SearchBox>
       </div>
       <div style={{ grid: 2 / 3, display: "flex", justifyContent: "flex-end" }}>
-        <Button buttonStyle="primary" buttonSize="default">
+        <Button
+          buttonStyle="primary"
+          buttonSize="default"
+          onClick={() => getAddPhotos()}
+        >
           Add a photo
         </Button>
         {loggedIn ? (

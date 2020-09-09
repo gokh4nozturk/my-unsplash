@@ -81,3 +81,27 @@ export const StyledContainer = styled.div`
     opacity: 1;
   }
 `;
+
+export const MainWrapper = styled.section`
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+`;
+
+export const Transparent = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  filter: blur(2px);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+`;
