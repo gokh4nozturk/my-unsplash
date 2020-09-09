@@ -3,7 +3,7 @@ import React from "react";
 import Button from "../../Button";
 import { StyledPopUp, StyledTextBox } from "./styled";
 
-function DeleteScreen() {
+function DeleteScreen({ getDeletePhotos, turnOfPopUps }) {
   return (
     <>
       <StyledPopUp>
@@ -16,7 +16,14 @@ function DeleteScreen() {
         ></StyledTextBox>
         <br />
         <div className="buttons">
-          <Button>Cancel</Button>
+          <Button
+            onClick={() => {
+              turnOfPopUps();
+              getDeletePhotos();
+            }}
+          >
+            Cancel
+          </Button>
           <Button buttonSize="default" buttonStyle="secondary">
             Delete
           </Button>

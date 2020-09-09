@@ -3,7 +3,7 @@ import React from "react";
 import Button from "../../Button";
 import { StyledPopUp, StyledTextBox } from "./styled";
 
-function AddNewPhoto() {
+function AddNewPhoto({ turnOfPopUps, getAddPhotos }) {
   return (
     <StyledPopUp>
       <h3>Add a new photo</h3>
@@ -21,7 +21,14 @@ function AddNewPhoto() {
       ></StyledTextBox>
       <br />
       <div className="buttons">
-        <Button>Cancel</Button>
+        <Button
+          onClick={() => {
+            getAddPhotos();
+            turnOfPopUps();
+          }}
+        >
+          Cancel
+        </Button>
         <Button buttonSize="default" buttonStyle="primary">
           Submit
         </Button>

@@ -10,9 +10,16 @@ const splash = new Unsplash({
   timeout: 1500,
 });
 
-function Main({ popUp }) {
+function Main({ popUp, getDeletePhotos }) {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
+  const [imgUrl, setImgUrl] = useState("Tekrar deneyiniz.");
+
+  const getImgUrl = () => {
+    images.map((item) => setImgUrl(item.links.html));
+    console.log(imgUrl);
+    alert(`Kopyalayınız : ${imgUrl}`);
+  };
 
   const getPhotos = (page) => {
     setPage(page);
@@ -36,10 +43,20 @@ function Main({ popUp }) {
           <StyledCard src={`${image.urls.regular}`} />
           <StyledPopUp>
             <div className="buttons">
-              <Button buttonStyle="thirty" buttonSize="small">
+              <Button
+                buttonStyle="thirty"
+                buttonSize="small"
+                onClick={() => {
+                  getDeletePhotos();
+                }}
+              >
                 Delete
               </Button>
-              <Button buttonStyle="primary" buttonSize="small">
+              <Button
+                buttonStyle="primary"
+                buttonSize="small"
+                onClick={() => getImgUrl()}
+              >
                 Copy
               </Button>
             </div>

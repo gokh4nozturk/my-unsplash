@@ -4,6 +4,7 @@ import Navigation from "./components/layout/Navigation";
 import Main from "./components/layout/Main/";
 import Login from "./components/layout/Modals/Login";
 import AddPhotoScreen from "./components/layout/Modals/AddPhotoScreen";
+import DeleteScreen from "./components/layout/Modals/DeleteScreen";
 
 import { Transparent, MainWrapper } from "./components/layout/Main/styled";
 
@@ -11,19 +12,24 @@ function App() {
   const [popUp, setPopUp] = useState(false);
   const [loginPopUp, setLoginPopUp] = useState(false);
   const [addPhotoPopUp, setAddPhotoPopUp] = useState(false);
+  const [deletePopUp, setDeletePopUp] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const popUps = () => {
+  const turnOfPopUps = () => {
     setPopUp(!popUp);
   };
 
   const getLogin = () => {
     setLoginPopUp(!loginPopUp);
-    popUps();
+    turnOfPopUps();
   };
   const getAddPhotos = () => {
     setAddPhotoPopUp(!addPhotoPopUp);
-    popUps();
+    turnOfPopUps();
+  };
+  const getDeletePhotos = () => {
+    setDeletePopUp(!deletePopUp);
+    turnOfPopUps();
   };
 
   return (
@@ -39,12 +45,25 @@ function App() {
             setPopUp(false);
             setAddPhotoPopUp(false);
             setLoginPopUp(false);
+            setDeletePopUp(false);
           }}
         />
       ) : null}
-      {addPhotoPopUp ? <AddPhotoScreen /> : null}
+      {addPhotoPopUp ? (
+        <AddPhotoScreen
+          turnOfPopUps={turnOfPopUps}
+          getAddPhotos={getAddPhotos}
+        />
+      ) : null}
       {loginPopUp ? <Login /> : null}
-      <Main popUp={popUp} />
+      {deletePopUp ? (
+        <DeleteScreen
+          turnOfPopUps={turnOfPopUps}
+          getDeletePhotos={getDeletePhotos}
+        />
+      ) : null}
+
+      <Main popUp={popUp} getDeletePhotos={getDeletePhotos} />
     </MainWrapper>
   );
 }

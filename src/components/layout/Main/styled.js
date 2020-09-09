@@ -82,6 +82,7 @@ export const StyledContainer = styled.div`
   }
 `;
 
+// bu kısım App.js için
 export const MainWrapper = styled.section`
   width: 100%;
   max-width: 1350px;
