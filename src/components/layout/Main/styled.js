@@ -82,10 +82,9 @@ export const StyledContainer = styled.div`
   }
 `;
 
-// bu kısım App.js için
+// this part of App.js
 export const MainWrapper = styled.section`
-  width: 100%;
-  max-width: 1350px;
+  max-width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
