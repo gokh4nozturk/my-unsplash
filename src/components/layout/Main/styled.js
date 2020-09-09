@@ -4,7 +4,7 @@ export const StyledPopUp = styled.div`
   opacity: 0;
   position: absolute;
   margin: 5px;
-  width: 17%;
+  width: 18%;
   height: 20%;
   display: flex;
   flex-direction: column;
