@@ -59,6 +59,7 @@ export default {
   radius: {
     primary: "24px",
     secondary: "12px",
+    thirty: "6px",
   },
   mediaQueries: {
     bellow786: `only screen and (max-width: 768px)`,

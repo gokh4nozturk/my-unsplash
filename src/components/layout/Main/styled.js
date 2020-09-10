@@ -67,6 +67,9 @@ export const StyledCard = styled.img`
   &:hover {
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    border-radius: ${({ theme }) => theme.radius.thirty};
+  }
 `;
 
 export const StyledContainer = styled.div`
