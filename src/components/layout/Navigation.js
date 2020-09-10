@@ -11,6 +11,10 @@ const StyledNavigation = styled.nav`
   grid-template-rows: 1fr;
   width: 100%;
   align-content: center;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.xSmall};
+  }
 `;
 
 function Navigation({ getLogin, loggedIn, getAddPhotos }) {

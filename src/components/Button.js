@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { FadeIn } from "./styled";
 
@@ -25,13 +25,12 @@ const Button = styled.button`
   min-width: ${({ theme, buttonSize = "default" }) =>
     theme.button.style.size[buttonSize]};
   padding: 18px 26px;
-`;
 
-// function Button({ buttonSize = "default", buttonStyle = "ghost", children }) {
-//   return (
-//     <StyledButton buttonSize={buttonSize} buttonStyle={buttonStyle}>
-//       {children}
-//     </StyledButton>
-//   );
-// }
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.xSmall};
+
+    width: ${({ theme }) => theme.button.style.size.small};
+    padding: 10px 15px;
+  }
+`;
 export default Button;

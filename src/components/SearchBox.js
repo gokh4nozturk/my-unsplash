@@ -21,6 +21,10 @@ const StyledSearchBox = styled.input`
   font-size: ${({ theme }) => theme.fontSizes.medium};
 
   color: ${({ theme }) => theme.colors.gray};
+
+  @media (max-width: 768px) {
+    width: ${({ theme }) => theme.textBox.style.size.small};
+  }
 `;
 
 function SearchBox({ type }) {

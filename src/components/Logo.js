@@ -9,7 +9,7 @@ const StyledLogo = styled.div`
   flex-direction: column;
   font-style: normal;
   font-weight: 800;
-  width: 180px;
+  width: 50%;
   cursor: pointer;
 
   font-family: ${({ theme }) => theme.fontFamily.primary};

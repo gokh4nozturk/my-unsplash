@@ -11,6 +11,7 @@ export default {
     large: "18px",
     medium: "14px",
     small: "12px",
+    xSmall: "10px;",
   },
   fontFamily: {
     primary: "Noto Sans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
@@ -45,8 +46,9 @@ export default {
   textBox: {
     style: {
       size: {
-        default: "300px",
         large: "550px",
+        default: "300px",
+        small: "100px",
         height: "55px",
       },
     },
