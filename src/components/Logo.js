@@ -9,12 +9,16 @@ const StyledLogo = styled.div`
   flex-direction: column;
   font-style: normal;
   font-weight: 800;
-  width: 50%;
+  width: 45%;
   cursor: pointer;
 
   font-family: ${({ theme }) => theme.fontFamily.primary};
   p:first-child {
     margin-bottom: 5px;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
   }
 `;
 

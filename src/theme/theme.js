@@ -48,8 +48,8 @@ export default {
       size: {
         large: "550px",
         default: "300px",
-        small: "100px",
-        height: "55px",
+        small: "110px",
+        height: "45px",
       },
     },
   },
