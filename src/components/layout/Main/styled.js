@@ -42,8 +42,6 @@ export const StyledPopUp = styled.div`
 `;
 
 export const StyledMain = styled.main`
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +93,6 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     margin: 2px;
-    object-fit: cover;
   }
 `;
 
