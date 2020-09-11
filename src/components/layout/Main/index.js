@@ -16,7 +16,6 @@ function Main({ popUp, getDeletePhotos }) {
 
   const getImgUrl = (image) => {
     const html = image.links.html;
-    console.log(html);
     alert(`Kopyalayınız : ${html}`);
   };
 

@@ -93,7 +93,7 @@ export const Container = styled.div`
     opacity: 1;
   }
   @media (max-width: 768px) {
-    width: 100%;
+    width: 80%;
     height: 80%;
   }
 `;
