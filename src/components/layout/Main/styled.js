@@ -93,8 +93,9 @@ export const Container = styled.div`
     opacity: 1;
   }
   @media (max-width: 768px) {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    margin: 2px;
+    object-fit: contain;
   }
 `;
 
