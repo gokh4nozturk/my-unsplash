@@ -1,14 +1,16 @@
+import Button from "../../Button";
 import styled from "styled-components";
 
 export const StyledPopUp = styled.div`
   opacity: 0;
   position: absolute;
-  margin: 5px;
-  width: 18%;
-  height: 20%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: ${({ theme }) => theme.radius.secondary};
 
   .buttons {
     display: grid;
@@ -17,7 +19,7 @@ export const StyledPopUp = styled.div`
     flex-direction: column;
     padding: 5px;
 
-    Button {
+    ${Button} {
       padding: 1px;
       margin: 2px;
       width: 100%;
@@ -73,9 +75,10 @@ export const StyledCard = styled.img`
 `;
 
 export const StyledContainer = styled.div`
+  position: relative;
   width: 24%;
   height: 24%;
-  padding: 5px;
+  /* padding: 5px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

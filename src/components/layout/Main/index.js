@@ -13,12 +13,11 @@ const splash = new Unsplash({
 function Main({ popUp, getDeletePhotos }) {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
-  const [imgUrl, setImgUrl] = useState("Tekrar deneyiniz.");
 
-  const getImgUrl = () => {
-    images.map((item) => setImgUrl(item.links.html));
-    console.log(imgUrl);
-    alert(`Kopyalayınız : ${imgUrl}`);
+  const getImgUrl = (image) => {
+    const html = image.links.html;
+    console.log(html);
+    alert(`Kopyalayınız : ${html}`);
   };
 
   const getPhotos = (page) => {
@@ -55,7 +54,7 @@ function Main({ popUp, getDeletePhotos }) {
               <Button
                 buttonStyle="primary"
                 buttonSize="small"
-                onClick={() => getImgUrl()}
+                onClick={() => getImgUrl(image)}
               >
                 Copy
               </Button>
