@@ -37,9 +37,12 @@ function Main({ popUp, getDeletePhotos }) {
   return (
     <StyledMain popUp={popUp}>
       {images.map((image) => (
-        <Container key={`${image.id}`}>
-          <StyledCard src={`${image.urls.regular}`} />
-          <StyledPopUp>
+        <Container key={`${image.id}`} className="aspect-ratio-container">
+          <StyledCard
+            src={`${image.urls.regular}`}
+            className="aspect-ratio-item"
+          />
+          <StyledPopUp className="aspect-ratio-item">
             <div className="buttons">
               <Button
                 buttonStyle="thirty"

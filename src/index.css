@@ -132,3 +132,22 @@ table {
 *::after {
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .aspect-ratio-container {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+  }
+  .aspect-ratio-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  img.aspect-ratio-item {
+    object-fit: cover;
+  }
+}
