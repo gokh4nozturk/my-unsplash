@@ -13,16 +13,17 @@ export const StyledPopUp = styled.div`
   border-radius: ${({ theme }) => theme.radius.secondary};
 
   .buttons {
-    display: grid;
     flex: 1;
-    justify-content: flex-end;
-    flex-direction: column;
     padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
 
     ${Button} {
       padding: 1px;
       margin: 2px;
-      width: 100%;
+      width: 20%;
 
       font-size: ${({ theme }) => theme.fontSizes.small};
       border-radius: ${({ theme }) => theme.radius.secondary};
@@ -59,6 +60,12 @@ export const StyledMain = styled.main`
     margin: 10px;
     width: 300px;
   }
+
+  @media (max-width: 768px) {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const StyledCard = styled.img`
@@ -74,23 +81,25 @@ export const StyledCard = styled.img`
   }
 `;
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
   position: relative;
   width: 24%;
-  height: 24%;
-  /* padding: 5px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 4px;
 
   &:hover ${StyledPopUp} {
     opacity: 1;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
 // this part of App.js
 export const MainWrapper = styled.section`
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

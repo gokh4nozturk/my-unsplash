@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Button from "../../Button";
 
-import { StyledMain, StyledCard, StyledContainer, StyledPopUp } from "./styled";
+import { StyledMain, StyledCard, Container, StyledPopUp } from "./styled";
 import Unsplash from "unsplash-js";
 
 const splash = new Unsplash({
@@ -38,7 +38,7 @@ function Main({ popUp, getDeletePhotos }) {
   return (
     <StyledMain popUp={popUp}>
       {images.map((image) => (
-        <StyledContainer key={`${image.id}`}>
+        <Container key={`${image.id}`}>
           <StyledCard src={`${image.urls.regular}`} />
           <StyledPopUp>
             <div className="buttons">
@@ -63,7 +63,7 @@ function Main({ popUp, getDeletePhotos }) {
               <p>{image.alt_description}</p>
             </div>
           </StyledPopUp>
-        </StyledContainer>
+        </Container>
       ))}
       <Button
         className="load-more-button"
