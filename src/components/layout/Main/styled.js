@@ -95,7 +95,7 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     margin: 2px;
-    object-fit: contain;
+    object-fit: cover;
   }
 `;
 
