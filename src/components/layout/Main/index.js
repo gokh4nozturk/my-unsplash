@@ -14,11 +14,6 @@ function Main({ popUp, getDeletePhotos }) {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
 
-  const getImgUrl = (image) => {
-    const html = image.links.html;
-    alert(`Kopyalayınız : ${html}`);
-  };
-
   const getPhotos = (page) => {
     setPage(page);
     splash.photos
@@ -28,6 +23,16 @@ function Main({ popUp, getDeletePhotos }) {
         setImages([...images, ...data]);
         console.log(data);
       });
+  };
+
+  const copyToClipboard = (str) => {
+    const el = document.createElement("textarea");
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    alert("Copied!");
   };
 
   useEffect(() => {
@@ -57,7 +62,7 @@ function Main({ popUp, getDeletePhotos }) {
                 <Button
                   buttonStyle="primary"
                   buttonSize="small"
-                  onClick={() => getImgUrl(image)}
+                  onClick={() => copyToClipboard(image.links.html)}
                 >
                   Copy
                 </Button>
