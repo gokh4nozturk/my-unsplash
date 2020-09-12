@@ -47,7 +47,6 @@ export const StyledMain = styled.main`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   z-index: 1;
   width: 100%;
-  object-fit: cover;
 
   margin-top: ${({ theme }) => theme.spacers.large};
   background-color: ${({ theme }) => theme.colors.light};
