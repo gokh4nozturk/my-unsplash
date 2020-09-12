@@ -1,5 +1,6 @@
 import Button from "../../Button";
 import styled from "styled-components";
+import { FadeIn } from "../../styled";
 
 export const StyledPopUp = styled.div`
   opacity: 0;
@@ -38,6 +39,17 @@ export const StyledPopUp = styled.div`
 
     font-family: ${({ theme }) => theme.fontFamily.primary};
     color: ${({ theme }) => theme.colors.light};
+  }
+
+  a {
+    margin-top: 4px;
+    text-decoration: none;
+    color: goldenrod;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: white;
+    transform: rotate3d(1, 2, 3, -10deg);
   }
 `;
 
