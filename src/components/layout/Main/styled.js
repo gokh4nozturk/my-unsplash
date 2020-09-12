@@ -41,11 +41,15 @@ export const StyledPopUp = styled.div`
   }
 `;
 
+// display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-wrap: wrap;
+
 export const StyledMain = styled.main`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   z-index: 1;
 
   margin-top: ${({ theme }) => theme.spacers.large};
@@ -70,6 +74,7 @@ export const StyledCard = styled.img`
   border-radius: ${({ theme }) => theme.radius.secondary};
   max-width: 100%;
   max-height: 100%;
+  object-fit: cover;
 
   &:hover {
     cursor: pointer;
@@ -81,7 +86,7 @@ export const StyledCard = styled.img`
 
 export const Container = styled.div`
   position: relative;
-  width: 24%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
