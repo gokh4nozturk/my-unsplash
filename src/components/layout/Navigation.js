@@ -34,6 +34,9 @@ const StyledNavigation = styled.nav`
   @media (max-width: 768px) {
     font-size: ${({ theme }) => theme.fontSizes.xSmall};
   }
+  ${Button} {
+    margin: 2px;
+  }
 `;
 
 function Navigation({ getLogin, loggedIn, getAddPhotos }) {

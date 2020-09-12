@@ -34,7 +34,7 @@ export default {
         primary: "none",
         secondary: "none",
         thirty: "1px solid #EB5757",
-        ghost: "none",
+        ghost: "1px solid black",
       },
       size: {
         xLarge: "300px",
