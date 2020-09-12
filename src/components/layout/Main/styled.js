@@ -103,12 +103,10 @@ export const Container = styled.div`
 
 // this part of App.js
 export const MainWrapper = styled.section`
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   max-width: 85%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 0.5rem;
 `;
 
