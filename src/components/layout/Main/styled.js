@@ -46,18 +46,13 @@ export const StyledMain = styled.main`
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   z-index: 1;
+  width: 100%;
 
   margin-top: ${({ theme }) => theme.spacers.large};
   background-color: ${({ theme }) => theme.colors.light};
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-family: ${({ theme }) => theme.fontFamily.primary};
   color: ${({ theme }) => theme.colors.dark};
-
-  @media (max-width: 768px) {
-    display: inline;
-    justify-content: center;
-    align-items: center;
-  }
 `;
 
 export const StyledCard = styled.img`
@@ -95,6 +90,7 @@ export const Container = styled.div`
 export const MainWrapper = styled.section`
   display: grid;
   grid-template-rows: auto 1fr auto;
+  place-items: center;
   max-width: 85%;
   margin: 0 auto;
   margin-top: 0.5rem;
