@@ -60,6 +60,9 @@ function Main({ popUp, getDeletePhotos }) {
               >
                 Copy
               </Button>
+              <a href={`${image.links.download}`} target="_blank">
+                download
+              </a>
             </div>
             <div className="description">
               <p>{image.alt_description}</p>

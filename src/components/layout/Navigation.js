@@ -59,7 +59,7 @@ function Navigation({ getLogin, loggedIn, getAddPhotos }) {
             buttonSize="default"
             onClick={() => getLogin()}
           >
-            Giriş Yap
+            Login
           </Button>
         )}
       </div>

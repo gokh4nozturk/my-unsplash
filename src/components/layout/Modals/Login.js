@@ -6,17 +6,17 @@ import { StyledPopUp, StyledTextBox } from "./styled";
 function Login() {
   return (
     <StyledPopUp>
-      <h3>Giriş Yap</h3>
+      <h3>Login - Sign Up</h3>
       <br />
-      <label>Kullanıcı Adı</label>
+      <label>Username</label>
       <StyledTextBox type="text" placeholder="Severus Snipe"></StyledTextBox>
       <br />
-      <label>Parola</label>
+      <label>Password</label>
       <StyledTextBox type="password" placeholder="************"></StyledTextBox>
       <br />
       <div className="buttons">
         <Button buttonSize="large" buttonStyle="primary">
-          Giriş Yap - Kayıt ol
+          Login - Sign Up
         </Button>
       </div>
     </StyledPopUp>
