@@ -35,50 +35,59 @@ function Main({ popUp, getDeletePhotos }) {
   }, []);
 
   return (
-    <StyledMain popUp={popUp}>
-      {images.map((image) => (
-        <Container key={`${image.id}`} className="aspect-ratio-container">
-          <StyledCard
-            src={`${image.urls.regular}`}
-            className="aspect-ratio-item"
-          />
-          <StyledPopUp className="aspect-ratio-item">
-            <div className="buttons">
-              <Button
-                buttonStyle="thirty"
-                buttonSize="small"
-                onClick={() => {
-                  getDeletePhotos();
-                }}
-              >
-                Delete
-              </Button>
-              <Button
-                buttonStyle="primary"
-                buttonSize="small"
-                onClick={() => getImgUrl(image)}
-              >
-                Copy
-              </Button>
-              <a href={`${image.links.download}`} target="_blank">
-                download
-              </a>
-            </div>
-            <div className="description">
-              <p>{image.alt_description}</p>
-            </div>
-          </StyledPopUp>
-        </Container>
-      ))}
-      <Button
+    <>
+      <StyledMain popUp={popUp}>
+        {images.map((image) => (
+          <Container key={`${image.id}`} className="aspect-ratio-container">
+            <StyledCard
+              src={`${image.urls.regular}`}
+              className="aspect-ratio-item"
+            />
+            <StyledPopUp className="aspect-ratio-item">
+              <div className="buttons">
+                <Button
+                  buttonStyle="thirty"
+                  buttonSize="small"
+                  onClick={() => {
+                    getDeletePhotos();
+                  }}
+                >
+                  Delete
+                </Button>
+                <Button
+                  buttonStyle="primary"
+                  buttonSize="small"
+                  onClick={() => getImgUrl(image)}
+                >
+                  Copy
+                </Button>
+                <a href={`${image.links.download}`} target="_blank">
+                  download
+                </a>
+              </div>
+              <div className="description">
+                <p>{image.alt_description}</p>
+              </div>
+            </StyledPopUp>
+          </Container>
+        ))}
+      </StyledMain>
+      <div
         className="load-more-button"
-        buttonSize="default"
-        buttonStyle="primary"
-        onClick={() => getPhotos(page + 1)}
+        style={{
+          display: "grid",
+          placeItems: "center",
+        }}
       >
-        load more
-      </Button>
-    </StyledMain>
+        <Button
+          buttonSize="xLarge"
+          buttonStyle="primary"
+          onClick={() => getPhotos(page + 1)}
+        >
+          load more
+        </Button>
+      </div>
+    </>
   );
 }
 

@@ -41,15 +41,10 @@ export const StyledPopUp = styled.div`
   }
 `;
 
-// display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-wrap: wrap;
-
 export const StyledMain = styled.main`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   z-index: 1;
 
   margin-top: ${({ theme }) => theme.spacers.large};
@@ -57,11 +52,6 @@ export const StyledMain = styled.main`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-family: ${({ theme }) => theme.fontFamily.primary};
   color: ${({ theme }) => theme.colors.dark};
-
-  .load-more-button {
-    margin: 10px;
-    width: 300px;
-  }
 
   @media (max-width: 768px) {
     display: inline;

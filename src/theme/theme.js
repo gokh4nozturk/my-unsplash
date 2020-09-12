@@ -37,8 +37,9 @@ export default {
         ghost: "none",
       },
       size: {
-        default: "100px",
+        xLarge: "300px",
         large: "200px",
+        default: "100px",
         small: "50px",
       },
     },
