@@ -1,6 +1,5 @@
 import Button from "../../Button";
 import styled from "styled-components";
-import { FadeIn } from "../../styled";
 
 export const StyledPopUp = styled.div`
   opacity: 0;
