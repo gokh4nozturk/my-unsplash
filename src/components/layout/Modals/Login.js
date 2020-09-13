@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Button from "../../Button";
 import { StyledPopUp, StyledTextBox } from "./styled";
 
-function Login(loggedIn) {
+function Login({ setLogged }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,7 +14,7 @@ function Login(loggedIn) {
       setUsername("");
       setPassword("");
       if (username === "severus snipe" && password === "slytherin") {
-        //buraya bi şeyler gelecek.
+        setLogged(true);
       } else alert("yalaaaaann söylüyorsun!!");
     } else {
       alert("eksik bilgi girişi var");

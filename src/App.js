@@ -32,6 +32,18 @@ function App() {
     turnOfPopUps();
   };
 
+  const transparentClear = () => {
+    setPopUp(false);
+    setAddPhotoPopUp(false);
+    setLoginPopUp(false);
+    setDeletePopUp(false);
+  };
+
+  const setLogged = (logged) => {
+    logged && setLoggedIn(!loggedIn);
+    transparentClear();
+  };
+
   return (
     <MainWrapper>
       <Navigation
@@ -42,10 +54,7 @@ function App() {
       {popUp ? (
         <Transparent
           onClick={() => {
-            setPopUp(false);
-            setAddPhotoPopUp(false);
-            setLoginPopUp(false);
-            setDeletePopUp(false);
+            transparentClear();
           }}
         />
       ) : null}
@@ -55,7 +64,7 @@ function App() {
           getAddPhotos={getAddPhotos}
         />
       ) : null}
-      {loginPopUp ? <Login /> : null}
+      {loginPopUp ? <Login setLogged={setLogged} /> : null}
       {deletePopUp ? (
         <DeleteScreen
           turnOfPopUps={turnOfPopUps}
