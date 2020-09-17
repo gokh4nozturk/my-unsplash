@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import Button from "../../Button";
+import ImageItem from "../../ImageItem";
 
-import { StyledMain, StyledCard, Container, StyledPopUp } from "./styled";
+import { StyledMain, Container, StyledPopUp } from "./styled";
 import Unsplash from "unsplash-js";
 
 const splash = new Unsplash({
@@ -43,11 +44,8 @@ function Main({ popUp, getDeletePhotos }) {
     <>
       <StyledMain popUp={popUp}>
         {images.map((image) => (
-          <Container key={`${image.id}`} className="aspect-ratio-container">
-            <StyledCard
-              src={`${image.urls.regular}`}
-              className="aspect-ratio-item"
-            />
+          <Container className="aspect-ratio-container">
+            <ImageItem key={`${image.id}`} {...image} />
             <StyledPopUp className="aspect-ratio-item">
               <div className="buttons">
                 <Button

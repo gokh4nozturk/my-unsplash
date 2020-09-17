@@ -66,20 +66,6 @@ export const StyledMain = styled.main`
   color: ${({ theme }) => theme.colors.dark};
 `;
 
-export const StyledCard = styled.img`
-  border-radius: ${({ theme }) => theme.radius.secondary};
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-
-  &:hover {
-    cursor: pointer;
-  }
-  @media (max-width: 768px) {
-    border-radius: ${({ theme }) => theme.radius.thirty};
-  }
-`;
-
 export const Container = styled.div`
   position: relative;
   width: 100%;

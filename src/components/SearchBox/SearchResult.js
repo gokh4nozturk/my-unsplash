@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import Navigation from "../layout/Navigation";
 
 import Button from "../Button";
+import ImageItem from "../ImageItem";
 
 import {
   StyledMain,
@@ -58,11 +59,8 @@ const SearchResults = () => {
       <Navigation />
       <StyledMain>
         {images.map((image) => (
-          <Container key={`${image.id}`} className="aspect-ratio-container">
-            <StyledCard
-              src={`${image.urls.regular}`}
-              className="aspect-ratio-item"
-            />
+          <Container className="aspect-ratio-container">
+            <ImageItem key={`${image.id}`} {...image} />
             <StyledPopUp className="aspect-ratio-item">
               <div className="buttons">
                 <Button
