@@ -6,7 +6,7 @@ import Navigation from "../layout/Navigation";
 import Button from "../Button";
 import ImageItem from "../ImageItem";
 
-import { StyledMain, Container, StyledPopUp } from "../layout/Main/styled";
+import { StyledMain, Container, StyledPopUp } from "../layout/Photos/styled";
 import { MainWrapper } from "../Home/style";
 
 import Unsplash from "unsplash-js";

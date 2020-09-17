@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Transparent, MainWrapper } from "./style";
 
 import Navigation from "../layout/Navigation";
-import Main from "../layout/Main/";
+import Photos from "../layout/Photos/";
 import Login from "../layout/Modals/Login";
 import AddPhotoScreen from "../layout/Modals/AddPhotoScreen";
 import DeleteScreen from "../layout/Modals/DeleteScreen";
@@ -73,7 +73,7 @@ const Home = () => {
           />
         ) : null}
 
-        <Main popUp={popUp} getDeletePhotos={getDeletePhotos} />
+        <Photos popUp={popUp} getDeletePhotos={getDeletePhotos} />
       </MainWrapper>
     </>
   );

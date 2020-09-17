@@ -19,11 +19,9 @@ const StyledCard = styled.img`
 
 const ImageItem = (image) => {
   return (
-    <>
-      {/* <Link to={`/photos/${image.id}`}> */}
-      <StyledCard src={`${image.urls.regular}`} />
-      {/* </Link> */}
-    </>
+    // <Link to={`/photos/${image.id}`}>
+    <StyledCard src={`${image.urls.regular}`} />
+    // </Link>
   );
 };
 
