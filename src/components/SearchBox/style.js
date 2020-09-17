@@ -1,8 +1,6 @@
-import React from "react";
-
 import styled from "styled-components";
 
-const StyledSearchBox = styled.input`
+export const StyledSearchBox = styled.input`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +26,3 @@ const StyledSearchBox = styled.input`
     height: ${({ theme }) => theme.textBox.style.size.height};
   }
 `;
-
-function SearchBox({ type }) {
-  return (
-    <>
-      <StyledSearchBox placeholder={type}></StyledSearchBox>
-    </>
-  );
-}
-
-export default SearchBox;
