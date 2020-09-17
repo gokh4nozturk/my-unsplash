@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 const StyledCard = styled.img`
@@ -18,7 +20,9 @@ const StyledCard = styled.img`
 const ImageItem = (image) => {
   return (
     <>
-      <StyledCard src={`${image.urls.regular}`} className="aspect-ratio-item" />
+      {/* <Link to={`/photos/${image.id}`}> */}
+      <StyledCard src={`${image.urls.regular}`} />
+      {/* </Link> */}
     </>
   );
 };
