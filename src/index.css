@@ -150,3 +150,12 @@ table {
     object-fit: cover;
   }
 }
+
+.nav__links {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__links:hover {
+  color: black;
+}

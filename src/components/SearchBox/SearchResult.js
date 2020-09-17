@@ -11,6 +11,7 @@ import {
   Container,
   StyledPopUp,
 } from "../layout/Main/styled";
+import { MainWrapper } from "../Home/style";
 
 import Unsplash from "unsplash-js";
 
@@ -33,7 +34,7 @@ const SearchResults = () => {
       })
       .then((e) => e.json())
       .then((data) => {
-        setImages(data.results);
+        setImages([...images, ...data.results]);
         console.log(data.results);
       });
   };
@@ -53,7 +54,7 @@ const SearchResults = () => {
   }, [page]);
 
   return (
-    <>
+    <MainWrapper>
       <Navigation />
       <StyledMain>
         {images.map((image) => (
@@ -97,7 +98,7 @@ const SearchResults = () => {
           load more
         </Button>
       </div>
-    </>
+    </MainWrapper>
   );
 };
 

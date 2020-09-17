@@ -8,11 +8,12 @@ const StyledLogo = styled.div`
   align-items: flex-start;
   flex-direction: column;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   width: 45%;
   cursor: pointer;
 
   font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-size: ${({ theme }) => theme.fontSizes.medium};
   p:first-child {
     margin-bottom: 5px;
   }

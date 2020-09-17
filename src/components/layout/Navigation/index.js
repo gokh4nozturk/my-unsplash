@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Button from "../../Button";
 import SearchBox from "../../SearchBox";
@@ -9,7 +10,9 @@ function Navigation({ getLogin, loggedIn, getAddPhotos }) {
   return (
     <StyledNavigation>
       <div className="nav__parts">
-        <Logo />
+        <Link to="/" className="nav__links">
+          <Logo />
+        </Link>
         <SearchBox type="Search by name"></SearchBox>
       </div>
       <div className="nav__parts">
