@@ -30,8 +30,8 @@ const SearchResults = () => {
       })
       .then((e) => e.json())
       .then((data) => {
-        setImages([...images, ...data.results]);
-        console.log(data.results);
+        setImages(data.results);
+        // console.log(data.results);
       });
   };
 
@@ -55,11 +55,7 @@ const SearchResults = () => {
       <StyledMain>
         {images.map((image) => (
           <Container className="aspect-ratio-container">
-            <ImageItem
-              key={`${image.id}${image.user.id}`}
-              className="aspect-ratio-item"
-              {...image}
-            />
+            <ImageItem className="aspect-ratio-item" {...image} />
             <StyledPopUp className="aspect-ratio-item">
               <div className="buttons">
                 <Button

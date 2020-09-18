@@ -22,7 +22,7 @@ function Main({ popUp, getDeletePhotos }) {
       .then((e) => e.json())
       .then((data) => {
         setImages([...images, ...data]);
-        console.log(data);
+        // console.log(data);
       });
   };
 
@@ -45,11 +45,7 @@ function Main({ popUp, getDeletePhotos }) {
       <StyledMain popUp={popUp}>
         {images.map((image) => (
           <Container className="aspect-ratio-container">
-            <ImageItem
-              key={`${image.id}${image.user.id}`}
-              className="aspect-ratio-item"
-              {...image}
-            />
+            <ImageItem className="aspect-ratio-item" {...image} />
             <StyledPopUp className="aspect-ratio-item">
               <div className="buttons">
                 <Button

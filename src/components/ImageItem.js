@@ -20,7 +20,10 @@ const StyledCard = styled.img`
 const ImageItem = (image) => {
   return (
     // <Link to={`/photos/${image.id}`}>
-    <StyledCard src={`${image.urls.regular}`} />
+    <StyledCard
+      key={`${image.id}${image.user.id}`}
+      src={`${image.urls.regular}`}
+    />
     // </Link>
   );
 };
