@@ -47,7 +47,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     fetchData(1);
-  }, [page]);
+  }, [page, searchKey]);
 
   return (
     <MainWrapper>
@@ -56,7 +56,7 @@ const SearchResults = () => {
         {images.map((image) => (
           <Container className="aspect-ratio-container">
             <ImageItem
-              key={`${image.id}`}
+              key={`${image.id}${image.user.id}`}
               className="aspect-ratio-item"
               {...image}
             />
