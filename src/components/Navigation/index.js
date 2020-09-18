@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Button from "../../Button";
-import SearchBox from "../../SearchBox";
-import Logo from "../../Logo";
+import Button from "../Button";
+import SearchBox from "../SearchBox";
+import Logo from "../Logo";
 import { StyledNavigation } from "./style";
 
 function Navigation({ getLogin, loggedIn, getAddPhotos }) {

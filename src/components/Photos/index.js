@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Button from "../../Button";
-import ImageItem from "../../ImageItem";
+import Button from "../Button";
+import ImageItem from "../ImageItem";
 
 import { StyledMain, Container, StyledPopUp } from "./styled";
 import Unsplash from "unsplash-js";

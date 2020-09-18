@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../../Button";
+import Button from "../Button";
 import { StyledPopUp, StyledTextBox } from "./styled";
 
 function DeleteScreen({ getDeletePhotos, turnOfPopUps }) {

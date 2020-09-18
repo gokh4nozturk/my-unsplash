@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 import { Transparent, MainWrapper } from "./style";
 
-import Navigation from "../layout/Navigation";
-import Photos from "../layout/Photos/";
-import Login from "../layout/Modals/Login";
-import AddPhotoScreen from "../layout/Modals/AddPhotoScreen";
-import DeleteScreen from "../layout/Modals/DeleteScreen";
+import Navigation from "../Navigation";
+import Photos from "../Photos/";
+import Login from "../Modals/Login";
+import AddPhotoScreen from "../Modals/AddPhotoScreen";
+import DeleteScreen from "../Modals/DeleteScreen";
 
 const Home = () => {
   const [popUp, setPopUp] = useState(false);

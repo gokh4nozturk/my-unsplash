@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-import Navigation from "../layout/Navigation";
+import Navigation from "../Navigation";
 
 import Button from "../Button";
 import ImageItem from "../ImageItem";
 
-import { StyledMain, Container, StyledPopUp } from "../layout/Photos/styled";
+import { StyledMain, Container, StyledPopUp } from "../Photos/styled";
 import { MainWrapper } from "../Home/style";
 
 import Unsplash from "unsplash-js";
