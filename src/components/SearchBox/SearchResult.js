@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router";
 
 import Navigation from "../Navigation";
@@ -21,19 +21,22 @@ const SearchResults = () => {
   const { searchKey = "" } = useParams();
   const [page, setPage] = useState(1);
 
-  const fetchData = (page) => {
-    setPage(page);
-    splash.search
-      .photos(searchKey, page, 30, {
-        orientation: "portrait",
-        color: "green",
-      })
-      .then((e) => e.json())
-      .then((data) => {
-        setImages(data.results);
-        // console.log(data.results);
-      });
-  };
+  const fetchData = useCallback(
+    (page) => {
+      setPage(page);
+      splash.search
+        .photos(searchKey, page, 30, {
+          orientation: "portrait",
+          color: "green",
+        })
+        .then((e) => e.json())
+        .then((data) => {
+          setImages(data.results);
+          // console.log(data.results);
+        });
+    },
+    [page, searchKey]
+  );
 
   const copyToClipboard = (str) => {
     const el = document.createElement("textarea");
@@ -47,7 +50,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     fetchData(1);
-  }, [page, searchKey]);
+  }, [fetchData]);
 
   return (
     <MainWrapper>
@@ -76,21 +79,6 @@ const SearchResults = () => {
           </Container>
         ))}
       </StyledMain>
-      <div
-        className="load-more-button"
-        style={{
-          display: "grid",
-          placeItems: "center",
-        }}
-      >
-        <Button
-          buttonSize="xLarge"
-          buttonStyle="primary"
-          onClick={() => fetchData(page + 1)}
-        >
-          load more
-        </Button>
-      </div>
     </MainWrapper>
   );
 };
