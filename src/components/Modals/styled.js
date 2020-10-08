@@ -23,6 +23,10 @@ export const StyledPopUp = styled.div`
   label {
     font-size: ${(props) => props.theme.fontSizes.medium};
   }
+  @media (max-width: 768px) {
+    top: 25%;
+    left: 5%;
+  }
 `;
 
 export const StyledTextBox = styled.input`
@@ -37,4 +41,8 @@ export const StyledTextBox = styled.input`
   height: ${({ theme }) => theme.textBox.style.size.height};
   border-radius: ${({ theme }) => theme.radius.primary};
   font-size: ${(props) => props.theme.fontSizes.medium};
+  @media (max-width: 768px) {
+    width: ${({ theme }) => theme.textBox.style.size.default};
+    height: ${({ theme }) => theme.textBox.style.size.height};
+  }
 `;
