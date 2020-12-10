@@ -7,7 +7,7 @@ import Button from "../Button";
 import ImageItem from "../ImageItem";
 
 import { StyledMain, Container, StyledPopUp } from "../Photos/styled";
-import { MainWrapper } from "../Home/style";
+import { MainWrapper } from "../Pages/Home/style";
 
 import Unsplash from "unsplash-js";
 
@@ -35,7 +35,7 @@ const SearchResults = () => {
           // console.log(data.results);
         });
     },
-    [page, searchKey]
+    [page, searchKey],
   );
 
   const copyToClipboard = (str) => {
