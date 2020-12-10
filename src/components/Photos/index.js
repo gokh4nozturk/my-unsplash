@@ -22,7 +22,7 @@ function Main({ popUp, getDeletePhotos }) {
       .then((e) => e.json())
       .then((data) => {
         setImages([...images, ...data]);
-        // console.log(data);
+        console.log(data);
       });
   };
 
@@ -64,7 +64,7 @@ function Main({ popUp, getDeletePhotos }) {
                 >
                   Copy
                 </Button>
-                <a href={`${image.links.download}`} target="_blank">
+                <a href={`${image.links.download}`} download>
                   download
                 </a>
               </div>
